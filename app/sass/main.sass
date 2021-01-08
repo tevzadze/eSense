@@ -1,5 +1,6 @@
 @import './common/vars.sass'
 @import './common/gem.scss'
+@import '../libs/owl/owl.carousel.min.css'
 
 *
     box-sizing: border-box
@@ -118,11 +119,82 @@ button[type='submit']
 
 //start here
 
-main
-    background: #101010
+body
+    background-image: url(../img/main_bg.png)
+    background-size: 100% 
+    background-repeat: repeat
+
+.button
+    background: var(--color-orange)
+    padding: gem(25) gem(52) gem(29) gem(50)
+    // color: #151515
+
+header
+    position: fixed
+    top: 0
+    left: 0
     width: 100%
-    height: 100vh
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
+    .menu
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        margin: gem(40) 0
+        a
+            display: flex
+            margin-right: gem(40)
+            &:last-child
+                margin-left: gem(75)
+.main-photo
+    position: absolute
+    right: 0
+    top: 0
+    width: gem(768)
+.hero
+    &-contains
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        
+        margin-top: gem(228)
+        h1
+            margin-bottom: gem(40)
+        .subtitle
+            margin-bottom: gem(40)
+        p
+            max-width: gem(737)
+        a
+            margin-top: gem(60)
+        .labels
+            margin-top: gem(190)
+            display: flex
+            img
+                margin-right: gem(67)
+                &:nth-child(1)
+                    width: gem(190)
+                &:nth-child(2)
+                    width: gem(226)
+            p
+                max-width: gem(334)
+        
+.skils-carousel
+    width: gem(1835)
+    margin-left: gem(192)
+    margin-top: gem(250)
+    .owl-item
+        padding: gem(20) 0
+
+    .card
+        width: gem(395)
+        height: gem(180)
+        background: var(--color-bgr-green-lite)
+        box-shadow: 0px gem(4) gem(25) rgba(0, 43, 35, 0.5)
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        padding: gem(33)
+        img
+            width: gem(114)
+            margin-right: gem(40)
