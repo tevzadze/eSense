@@ -392,3 +392,36 @@ header
                     transition: opacity 0.5s ease
         &-card:nth-child(4), &-card:nth-child(5), &-card:nth-child(6)
             height: gem(516)
+    .change
+        display: flex
+        margin-top: gem(120)
+        &-main
+            display: flex
+            position: relative
+            &-pics
+                display: flex
+                width: gem(792)
+            &-text
+                display: flex
+                flex-direction: column
+                align-items: center
+                background: var(--color-bgr-green-lite)
+                padding: gem(71) gem(121)
+                position: absolute
+                width: gem(970)
+                top: gem(90)
+                right: 0
+                p, h3
+                    text-align: center
+                h3
+                    margin: gem(40) 0
+            &-button
+                display: flex
+                background: var(--color-orange)
+                justify-content: center
+                align-items: center
+                width: gem(362)
+                height: gem(72)
+                margin-top: gem(40)
+                span
+                    display: flex
