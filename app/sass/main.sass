@@ -182,6 +182,7 @@ header
     width: gem(1835)
     margin-left: gem(192)
     margin-top: gem(250)
+    margin-bottom: gem(160)
     .owl-item
         padding: gem(20) 0
 
@@ -198,3 +199,196 @@ header
         img
             width: gem(114)
             margin-right: gem(40)
+.best
+    &-contains
+        display: flex
+        flex-direction: column
+    &-title
+        background: var(--color-bgr-green)
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-top: gem(90)
+            margin-bottom: gem(299)
+            p
+                text-align: center
+                margin-top: gem(45)
+    &-main
+        position: relative
+        top: gem(-182)
+        &-cards
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            &-element
+                display: flex
+                flex-direction: column
+                width: gem(480)
+                height: gem(630)
+                position: relative
+                margin-top: gem(48)
+                overflow-y: hidden
+                &-pics
+                    display: flex
+                    width: 100%
+                    img
+                        width: 100%
+                &-text, &-text-full
+                    display: flex
+                    flex-direction: column
+                    width: 100%
+                    background: var(--color-bgr-green)
+                    position: absolute
+                    bottom: 0
+                    .label-4.orange
+                        margin-left: gem(6)
+                    .diagnosis
+                        display: flex
+                        &-element
+                            display: flex
+                            margin-top: gem(16)
+                            margin-right: gem(16)
+                            border: var(--color-orange) gem(1) solid
+                            border-radius: gem(100)
+                            padding: gem(10) gem(26)
+                &-text
+                    padding: gem(25) gem(34)
+                &-text-full
+                    display: flex
+                    background: var(--color-bgr-green-lite)
+                    bottom: -100%
+                    transition: 0.5s all ease
+                    p
+                        margin-top: gem(10)
+                    &-contains
+                        display: flex
+                        flex-direction: column
+                        width: 100%
+                        padding: gem(25) gem(34)
+                        &-button
+                            display: flex
+                            width: 100%
+                            height: gem(72)
+                            justify-content: center
+                            align-items: center
+                            background: var(--color-orange)
+            &-element:hover
+                .best-main-cards-element-text-full
+                    bottom: 0
+                    transition: 0.5s all ease
+.advantages
+    background: var(--color-bgr-green)
+    &-contains
+        display: flex
+        flex-direction: column
+    &-title
+        display: flex
+        background: var(--color-bgr-green)
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: gem(90) 0
+            p
+                text-align: center
+                margin-top: gem(45)
+    &-main
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &-element
+            display: flex
+            flex-direction: column
+            max-width: gem(303)
+            align-items: center
+            margin: 0 gem(90)
+            margin-bottom: gem(90)
+            &-pics
+                display: flex
+                width: gem(180)
+                height: auto
+            &-text
+                display: flex
+                p
+                    text-align: center
+                    margin-top: gem(20)
+.services
+    &-contains
+        display: flex
+        flex-direction: column
+    &-title
+        display: flex
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: gem(90) 0
+            p
+                text-align: center
+                margin-top: gem(45)
+    &-main
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &-card
+            display: flex
+            flex-direction: column
+            border: gem(1) solid var(--color-green)
+            width: gem(480)
+            height: gem(741)
+            position: relative
+            transition: opacity 0.5s ease
+            margin-bottom: gem(48)
+            &-title
+                display: flex
+                width: 100%
+                height: gem(99)
+                justify-content: center
+                align-items: center
+                border-bottom: gem(1) solid var(--color-green)
+            &-list
+                display: flex
+                flex-direction: column
+                padding: 0 gem(32)
+                padding-top: gem(37)
+                &-element
+                    display: flex
+                    align-items: center
+                    margin-bottom: gem(14)
+                    p
+                        display: flex
+                        max-width: gem(365)
+                    svg
+                        width: gem(18)
+                        height: gem(18)
+                        margin-right: gem(8)
+                        path
+                            transition: opacity 0.5s ease
+                &-element:last-child
+                    margin-bottom: 0
+            &-button
+                display: flex
+                position: absolute
+                bottom: 0
+                width: 100%
+                height: gem(72)
+                justify-content: center
+                align-items: center
+                transition: opacity 0.5s ease
+                span
+                    transition: opacity 0.5s ease
+        &-card:hover
+            background: var(--color-bgr-green-lite)
+            transition: opacity 0.5s ease
+            .services-main-card-list-element svg path
+                fill: var(--color-bgr-green)
+                transition: opacity 0.5s ease
+            .services-main-card-button
+                background: var(--color-orange)
+                transition: opacity 0.5s ease
+                span
+                    color: var(--color-black)
+                    transition: opacity 0.5s ease
+        &-card:nth-child(4), &-card:nth-child(5), &-card:nth-child(6)
+            height: gem(516)
