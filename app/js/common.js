@@ -66,5 +66,15 @@ $(function() {
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom'
 	});
-
+	let header = document.querySelector('header')
+	let body = document.querySelector('body')
+    window.addEventListener('scroll', function(){
+    	let bodyPosition = body.getBoundingClientRect()
+    	if (bodyPosition.top < -130 && header.classList.contains('scrolled')) {
+    	} else if (bodyPosition.top < -130) {
+			header.classList.add('scrolled')
+    	} else if (bodyPosition.top > -130 && header.classList.contains('scrolled')){
+			header.classList.remove('scrolled')
+    	}
+    })
 });
