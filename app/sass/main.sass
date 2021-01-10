@@ -129,6 +129,16 @@ body
 .button
     background: var(--color-orange)
     padding: gem(25) gem(52) gem(29) gem(50)
+    transition: ease 0.3s all
+    span
+        transition: ease 0.3s all
+.button:hover
+    background: var(--color-black)
+    color: var(--color-orange) !important
+    transition: ease 0.3s all
+    span
+        color: var(--color-orange)
+        transition: ease 0.3s all
     // color: #151515
 
 header
@@ -137,6 +147,7 @@ header
     left: 0
     width: 100%
     z-index: 9
+    background: var(--color-bgr-menu)
     .menu
         display: flex
         flex-direction: row
@@ -146,8 +157,12 @@ header
         a
             display: flex
             margin-right: gem(40)
+            transition: ease 0.3s all
             &:last-child
                 margin-left: gem(75)
+        a:hover
+            color: var(--color-orange)
+            transition: ease 0.3s all
 .main-photo
     position: absolute
     right: 0
@@ -195,7 +210,7 @@ header
         width: gem(395)
         height: gem(180)
         background: var(--color-bgr-green-lite)
-        box-shadow: 0px gem(4) gem(25) rgba(0, 43, 35, 0.5)
+        box-shadow: 0 gem(4) gem(25) rgba(0, 43, 35, 0.5)
         display: flex
         flex-direction: row
         justify-content: flex-start
@@ -278,6 +293,13 @@ header
                             justify-content: center
                             align-items: center
                             background: var(--color-orange)
+                        &-button:hover
+                            background: var(--color-black)
+                            color: var(--color-orange) !important
+                            transition: ease 0.3s all
+                            span
+                                color: var(--color-orange)
+                                transition: ease 0.3s all
             &-element:hover
                 .best-main-cards-element-text-full
                     bottom: 0
@@ -345,6 +367,7 @@ header
             position: relative
             transition: opacity 0.5s ease
             margin-bottom: gem(48)
+            z-index: 1
             &-title
                 display: flex
                 width: 100%
@@ -381,8 +404,16 @@ header
                 justify-content: center
                 align-items: center
                 transition: opacity 0.5s ease
+                z-index: 2
                 span
                     transition: opacity 0.5s ease
+            &-button:hover
+                background: var(--color-black) !important
+                color: var(--color-orange) !important
+                transition: ease 0.3s all
+                span
+                    color: var(--color-orange) !important
+                    transition: ease 0.3s all
         &-card:hover
             background: var(--color-bgr-green-lite)
             transition: opacity 0.5s ease
@@ -428,8 +459,17 @@ header
                 width: gem(362)
                 height: gem(72)
                 margin-top: gem(40)
+                transition: ease 0.3s all
                 span
                     display: flex
+                    transition: ease 0.3s all
+            &-button:hover
+                background: var(--color-black)
+                color: var(--color-orange) !important
+                transition: ease 0.3s all
+                span
+                    color: var(--color-orange)
+                    transition: ease 0.3s all
 .feedback
     &-carousel
         width: gem(1584)
@@ -560,6 +600,116 @@ header
                 cursor: pointer
                 outline: none
                 border: none
+.map
+    &-contains
+        display: flex
+        flex-direction: column
+    &-title
+        display: flex
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: gem(90) 0
+            p
+                text-align: center
+                margin-top: gem(45)
+    &-main
+        display: flex
+        &-pics
+            display: flex
+            width: gem(936)
+            height: gem(844)
+        &-text
+            display: flex
+            margin-top: gem(321)
+            margin-left: gem(216)
+            flex-direction: column
+            p, a
+                display: flex
+                margin-bottom: gem(41)
+                max-width: gem(576)
+            p:last-child, a:last-child
+                margin-bottom: 0
+.footer
+    background: var(--color-black)
+    &-main
+        display: flex
+        justify-content: space-between
+        margin: gem(90) 0
+        align-items: center
+        .menu
+            display: flex
+            a
+                display: flex
+                margin-right: gem(41)
+                transition: ease 0.3s all
+            a:last-child
+                margin-right: 0
+            a:hover
+                color: var(--color-orange)
+                transition: ease 0.3s all
+        .button
+            transition: ease 0.3s all
+        .button:hover
+            background: var(--color-white)
+            color: var(--color-black) !important
+            transition: ease 0.3s all
+            
+.leaving, .waiting
+    display: flex
+    display: none
+    flex-direction: column
+    background: var(--color-bgr-green-lite)
+    padding: gem(230) gem(92)
+    width: gem(892)
+    height: gem(829)
+.leaving
+    margin-bottom: gem(40)
+    p:first-child
+        margin-bottom: gem(40)
+    form
+        width: gem(290)
+        display: flex
+        flex-direction: column
+        margin-top: gem(40)
+        input
+            background: none
+            border: none
+            border-bottom: 1px #fff solid
+            width: gem(290)
+            height: gem(35)
+            outline: none
+            margin-bottom: gem(40)
+        button
+            display: flex
+            background: var(--color-orange)
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: gem(72)
+            border: none
+            span
+                display: flex
+
+
+.waiting
+    padding: gem(212) 0
+    align-items: center
+    p:first-child
+        margin-bottom: gem(40)
+    p:nth-child(2)
+        margin-bottom: gem(20)
+    a
+        display: flex
+        width: gem(494)
+        height: gem(72)
+        justify-content: center
+        align-items: center
+        background: var(--color-orange)
+    a:nth-child(4)
+        margin-top: gem(40)
+        margin-bottom: gem(20)
 
 /* at start */
 .my-mfp-slide-bottom .zoom-anim-dialog 
