@@ -279,8 +279,12 @@ header
                 &-text-full
                     display: flex
                     background: var(--color-bgr-green-lite)
-                    bottom: -100%
+                    bottom: 0
+                    opacity: 0
+                    // transform: translateY(gem(20))
+                    pointer-events: none
                     transition: 0.5s all ease
+
                     p
                         margin-top: gem(10)
                     &-contains
@@ -305,7 +309,10 @@ header
             &-element:hover
                 .best-main-cards-element-text-full
                     bottom: 0
-                    transition: 0.5s all ease
+                    // transform: translateY(gem(0))
+                    pointer-events: unset
+                    opacity: 1
+                    
 .advantages
     background: var(--color-bgr-green)
     &-contains
@@ -367,7 +374,7 @@ header
             width: gem(480)
             height: gem(741)
             position: relative
-            transition: opacity 0.5s ease
+            transition: all 0.5s ease
             margin-bottom: gem(48)
             z-index: 1
             &-title
@@ -393,8 +400,9 @@ header
                         width: gem(18)
                         height: gem(18)
                         margin-right: gem(8)
+                        // transition:/
                         path
-                            transition: opacity 0.5s ease
+                            transition: all 0.5s ease
                 &-element:last-child
                     margin-bottom: 0
             &-button
@@ -405,29 +413,29 @@ header
                 height: gem(72)
                 justify-content: center
                 align-items: center
-                transition: opacity 0.5s ease
+                transition: all 0.5s ease
                 z-index: 2
                 span
-                    transition: opacity 0.5s ease
+                    transition: all 0.5s ease
             &-button:hover
                 background: var(--color-black) !important
                 color: var(--color-orange) !important
-                transition: ease 0.3s all
+                transition: all  ease 0.3s 
                 span
                     color: var(--color-orange) !important
                     transition: ease 0.3s all
         &-card:hover
             background: var(--color-bgr-green-lite)
-            transition: opacity 0.5s ease
+            transition: all 0.5s ease
             .services-main-card-list-element svg path
                 fill: var(--color-bgr-green)
-                transition: opacity 0.5s ease
+                transition: all 0.5s ease
             .services-main-card-button
                 background: var(--color-orange)
-                transition: opacity 0.5s ease
+                transition: all 0.5s ease
                 span
                     color: var(--color-black)
-                    transition: opacity 0.5s ease
+                    transition: all 0.5s ease
         &-card:nth-child(4), &-card:nth-child(5), &-card:nth-child(6)
             height: gem(516)
     .change
@@ -439,6 +447,8 @@ header
             &-pics
                 display: flex
                 width: gem(792)
+                img
+                    width: 100%
             &-text
                 display: flex
                 flex-direction: column
@@ -660,11 +670,12 @@ header
             
 .leaving, .waiting
     display: flex
-    display: none
+    // display: none
     flex-direction: column
     background: var(--color-bgr-green-lite)
     padding: gem(230) gem(92)
     width: gem(892)
+    margin: auto
     height: gem(829)
 .leaving
     margin-bottom: gem(40)

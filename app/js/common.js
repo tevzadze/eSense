@@ -51,7 +51,8 @@ $(function() {
     })
 
     //popup
-    $('.popup-with-move-anim').magnificPopup({
+    let popup = $('.popup-with-move-anim')
+    popup.magnificPopup({
 		type: 'inline',
 
 		fixedContentPos: false,
@@ -66,6 +67,20 @@ $(function() {
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom'
 	});
+
+	// popup.open();
+
+	//waiting-popup
+	function openPopup(){
+	$.magnificPopup.open({
+	    items: {
+	      src: '.waiting',
+		    }, 
+		    mainClass: 'my-mfp-slide-bottom'
+		  });
+		}
+	setTimeout(openPopup, 30000)
+
 	let header = document.querySelector('header')
 	let body = document.querySelector('body')
     window.addEventListener('scroll', function(){
@@ -77,4 +92,9 @@ $(function() {
 			header.classList.remove('scrolled')
     	}
     })
+
+    $("a[rel='m_PageScroll2id']").mPageScroll2id({
+    	offset: header.getBoundingClientRect().height
+    });
+
 });
