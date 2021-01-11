@@ -721,7 +721,7 @@ header
         height: gem(72)
         justify-content: center
         align-items: center
-        background: var(--color-orange)
+        background: var(--color-orange) 
     a:nth-child(4)
         margin-top: gem(40)
         margin-bottom: gem(20)
@@ -731,17 +731,36 @@ header
         height: gem(80)
         .menu
             margin: 0
+            margin-top: gem(16)
+            justify-content: space-between
             a
                 display: none
             .label-1.button.black.popup-with-move-anim
                 display: flex
                 width: gem(161)
                 height: gem(47)
-                padding: gem(11) gem(23) gem(15)
+                padding: gem(11) gem(22) gem(15)
                 margin: 0
             .burger
                 display: flex
                 position: relative
+                background: var(--color-white)
+                width: gem(24)
+                height: gem(1)
+                &:before
+                    content: ''
+                    position: absolute
+                    top: gem(6)
+                    background: var(--color-white)
+                    width: gem(24)
+                    height: gem(1)
+                &:after
+                    content: ''
+                    position: absolute
+                    bottom: gem(6)
+                    background: var(--color-white)
+                    width: gem(24)
+                    height: gem(1)
                 
     footer
         display: none

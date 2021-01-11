@@ -93,8 +93,8 @@ $(function() {
     	}
     })
 
-    $("a[rel='m_PageScroll2id']").mPageScroll2id({
-    	offset: header.getBoundingClientRect().height
-    });
+    // $("a[rel='m_PageScroll2id']").mPageScroll2id({
+    // 	offset: header.getBoundingClientRect().height
+    // });
 
 });
