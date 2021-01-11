@@ -163,6 +163,8 @@ header
         a:hover
             color: var(--color-orange)
             transition: ease 0.3s all
+        .burger
+            display: none
 .main-photo
     position: absolute
     right: 0
@@ -710,6 +712,27 @@ header
     a:nth-child(4)
         margin-top: gem(40)
         margin-bottom: gem(20)
+
+@media all and (max-width: 480px)
+    header
+        height: gem(80)
+        .menu
+            margin: 0
+            a
+                display: none
+            .label-1.button.black.popup-with-move-anim
+                display: flex
+                width: gem(161)
+                height: gem(47)
+                padding: gem(11) gem(23) gem(15)
+                margin: 0
+            .burger
+                display: flex
+                position: relative
+                
+    footer
+        display: none
+
 
 /* at start */
 .my-mfp-slide-bottom .zoom-anim-dialog 
