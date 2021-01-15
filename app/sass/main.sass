@@ -2,6 +2,8 @@
 @import './common/gem.scss'
 @import '../libs/owl/owl.carousel.min.css'
 @import '../libs/popup/magnific-popup.css'
+@import '../libs/owlgallery/owl.carousel.css'
+@import '../libs/owlgallery/owl.theme.default.css'
 
 *
     box-sizing: border-box
@@ -316,6 +318,38 @@ header
                     // transform: translateY(gem(0))
                     pointer-events: unset
                     opacity: 1
+.awards
+    background: var(--color-bgr-green)
+    margin-bottom: gem(180)
+    padding-bottom: gem(90)
+    &-contains
+        display: flex
+        flex-direction: column
+    &-title
+        display: flex
+        background: var(--color-bgr-green)
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: gem(90) 0
+            p
+                text-align: center
+                margin-top: gem(45)
+    &-main
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &-element
+            display: flex
+            flex-direction: column
+            width: gem(348)
+            height: gem(483)
+            align-items: center
+            justify-content: center
+            img
+                width: 100%
+                height: auto
                     
 .advantages
     background: var(--color-bgr-green)
@@ -861,6 +895,14 @@ header
         padding: gem(16) gem(22)
     .best-main-cards-element-text .label-4.orange, .best-main-cards-element-text-full .label-4.orange
         margin-left: 0
+    .awards
+        &-title-text
+            margin-top: gem(70)
+            margin-bottom: gem(40)
+            align-items: flex-start
+            p
+                text-align: left
+                margin-top: gem(14)
     .advantages
         margin-top: gem(-112)
         // margin-bottom: gem(40)
@@ -1106,3 +1148,8 @@ header
 /* animate out */
 .my-mfp-slide-bottom.mfp-removing.mfp-bg 
     opacity: 0
+
+// owlgallery
+.mfp-title, .image-source-link
+    display: none
+
