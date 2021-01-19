@@ -116,7 +116,7 @@ $(function() {
             mainClass: 'my-mfp-slide-bottom'
         });
     }
-    setTimeout(openPopup, 30000)
+    // setTimeout(openPopup, 30000)
 
     function leavepopup() {
         $.magnificPopup.open({
@@ -140,7 +140,7 @@ $(function() {
             e = e ? e : window.event;
             var from = e.relatedTarget || e.toElement;
             if (!from || from.nodeName == "HTML") {
-                leavepopup();
+                // leavepopup();
             }
         });
     });

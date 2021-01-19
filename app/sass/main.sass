@@ -319,7 +319,7 @@ header
                     pointer-events: unset
                     opacity: 1
 .awards
-    background: var(--color-bgr-green)
+    // background: var(--color-bgr-green)
     margin-bottom: gem(180)
     padding-bottom: gem(90)
     &-contains
@@ -327,7 +327,7 @@ header
         flex-direction: column
     &-title
         display: flex
-        background: var(--color-bgr-green)
+        // background: var(--color-bgr-green)
         &-text
             display: flex
             flex-direction: column
@@ -896,13 +896,18 @@ header
     .best-main-cards-element-text .label-4.orange, .best-main-cards-element-text-full .label-4.orange
         margin-left: 0
     .awards
+        margin-bottom: gem(140)
+        padding-bottom: gem(50)
         &-title-text
-            margin-top: gem(70)
+            margin-top: gem(-50)
             margin-bottom: gem(40)
             align-items: flex-start
             p
                 text-align: left
                 margin-top: gem(14)
+        &-main-element
+            height: auto
+            margin-bottom: gem(20)
     .advantages
         margin-top: gem(-112)
         // margin-bottom: gem(40)
